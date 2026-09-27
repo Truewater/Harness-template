@@ -1,0 +1,16 @@
+# ▼ 스택에 맞게 추가 (예: node_modules/, .next/, dist/, __pycache__/)
+
+# phase execution outputs
+phases/**/step*-output.json
+
+# harness 테스트 캐시
+__pycache__/
+.pytest_cache/
+
+# env (API keys)
+.env
+.env*.local
+
+# OMC / 세션 런타임 상태 (하위 폴더에 생긴 것까지 모두 제외)
+**/.omc/*
+!.omc/skills/
