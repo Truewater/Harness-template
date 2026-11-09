@@ -19,6 +19,7 @@ Claude Code로 "문서 → step 계획 → 자동 실행" 흐름을 돌리기 �
 | `.claude/settings.json` | 훅 등록 | 그대로 |
 | `.claude/hooks/block-dangerous.sh` | 위험한 Bash 명령 차단 (exit 2) | 필요시 패턴 추가 |
 | `.claude/hooks/stop-verify.sh` | 세션 종료 전 검증, 실패 시 계속 고치게 함 | **`VERIFY_CMD` 수정** |
+| `.claude/hooks/tdd-guard.sh` | Edit/Write 시 테스트 파일 없는 구현 코드(.ts/.tsx/.js/.jsx) 작성 차단. `package.json` 생기기 전엔 비활성, `jq` 필요 | 스택에 맞게 예외 패턴 조정 |
 | `scripts/execute.py` | phase의 step을 순차 실행하는 하네스 | 그대로 |
 | `scripts/test_execute.py` | execute.py 테스트 (`uvx pytest scripts/test_execute.py`) | 그대로 |
 | `phases/index.json` | phase 목록 (비어 있음) | 그대로 |
